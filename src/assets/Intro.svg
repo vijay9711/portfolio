@@ -1,0 +1,34 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="874.5" height="719" viewBox="0 0 874.5 719">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+        stroke: rgba(255,255,255,0.25);
+        stroke-linecap: round;
+        stroke-width: 6px;
+      }
+
+      .cls-2, .cls-3 {
+        fill: #fff;
+        font-family: Gabriola;
+      }
+
+      .cls-2 {
+        font-size: 140px;
+      }
+
+      .cls-3 {
+        font-size: 55px;
+      }
+    </style>
+  </defs>
+  <g id="Intro" transform="translate(-128.5 -111.5)">
+    <line id="Line_1" data-name="Line 1" class="cls-1" y2="713" transform="translate(131.5 114.5)"/>
+    <text id="Hi_" data-name="Hi," class="cls-2" transform="translate(172 308)"><tspan x="0" y="0">Hi,</tspan></text>
+    <text id="I_m_Vijay._I_am_a_Full-Stack_Web_Developer_who_is_always_discovering_something_new._As_a_developer_solving_the_problems_by_thinking_from_the_client_side_is_one_of_great_quality._" data-name="I’m Vijay. I am a Full-Stack Web Developer 
+who is always discovering something new. 
+As a developer solving the problems by 
+thinking from the client side is one of 
+great quality. " class="cls-3" transform="translate(287 394)"><tspan x="0" y="0">I’m Vijay. I am a Full-Stack Web Developer </tspan><tspan x="0" y="104">who is always discovering something new. </tspan><tspan x="0" y="208">As a developer solving the problems by </tspan><tspan x="0" y="312">thinking from the client side is one of </tspan><tspan x="0" y="416">great quality. </tspan></text>
+  </g>
+</svg>
