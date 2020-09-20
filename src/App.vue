@@ -39,6 +39,8 @@ export default {
       console.log(event)
       var elmnt = document.getElementById(event);
       elmnt.scrollIntoView({
+        top: 'offsetPosition',
+        block: "end",
          behavior: 'smooth'
       });
     },

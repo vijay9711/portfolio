@@ -1,8 +1,8 @@
 <template>
-  <div class="home-wrapper m-0" id="home" @mouseover="moveObject($event,'self-intro-pic')">
+  <div class="home-wrapper m-0" id="home">
     <div class="home-content">
       <div class="row p-0 m-0 self-intro-wrapper">
-        <div class="col-6 p-0 m-0">
+        <div class="col-lg-6 col-sm-11 col-md-6 p-0 m-0 self-intro-content">
           <img
             src="../assets/Intro.svg"
             data-aos="fade-right"
@@ -10,17 +10,17 @@
             class="selt-intro"
           />
         </div>
-        <div class="col-6 p-0 m-0">
+        <div class="col-lg-6 col-sm-12 col-md-6 p-0 m-0">
           <img
             src="../assets/IntroBg.svg"
             data-aos="zoom-in-up"
-            data-aos-offset="500"
             data-aos-duration="300"
             class="self-intro-pic-bg"
           />
-          <img
+            <img
+            data-speed="-3"
+            data-depth="0.2"
             data-aos="fade-left"
-            data-aos-offset="500"
             data-aos-duration="400"
             data-aos-delay="200"
             src="../assets/PC_pic.svg"
@@ -33,33 +33,41 @@
 </template>
 
 <script>
-// import $ from "jquery";
+document.addEventListener('mousemove',parallax);
+function parallax(e){
+      const img = document.querySelector(`.self-intro-pic`);
+      const speed = img.getAttribute('data-speed');
+      const mouseX = (window.innerWidth - e.pageX*speed)/100;
+      const mouseY = (window.innerHeight - e.pageY*speed)/100;
+      img.style.transform = `translateX(${mouseX}px) translateY(${mouseY}px)`;
+}
 export default {
-  components: {},
+  components: {
+  },
   data(){
     return{
-      windowWidth:window.innerWidth / 10,
-      windowHeight: window.innerHeight / 10
     }
   },
   methods:{
-    moveObject(e,className){
-      const img = document.querySelector(`.${className}`);
-      const mouseX = e.clientX / this.windowWidth;
-      const mouseY = e.clientY / this.windowHeight;
-      setTimeout(()=>{
-      console.log(mouseX,mouseY)
-        img.style.transform = `translate3d(-${mouseX}%, -${mouseY}%, 0)`;
-      },1000)
-    }
+    // moveObject(e,className){
+    //   // console.log(`translateX(${mouseX}%, ${mouseY}%)`)
+    // }
   }
 };
 </script>
-
 <style scoped>
 .home-wrapper {
   height: 100vh;
 }
+/* .bg{
+  background-image: url('../assets/home/bg.jpg');
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 100%;
+  z-index: -1;
+} */
 .home-content {
   overflow: hidden;
 }
@@ -74,13 +82,17 @@ export default {
 }
 .self-intro-pic {
   position: absolute;
-  width: 70%;
+  width: 60%;
   right: 5%;
-  bottom: 15%;
-  transition-duration: .5s;
+  bottom: 6%;
+  object-fit: cover;
 }
 .self-intro-pic-bg {
-  width: 100%;
+  position: absolute;
+  right: 5%;
+  bottom: .5%;
+  overflow: hidden;
+  width: 80%;
   align-items: flex-end;
 }
 </style>

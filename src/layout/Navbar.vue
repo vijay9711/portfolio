@@ -12,7 +12,7 @@
 
     <b-collapse id="nav-collapse" is-nav>
       <b-navbar-nav>
-        <b-nav-item v-for="(item,index) in navItems" class="ml-3" :class="item.label === selectedItem?'selected-item':'not-selected-item'" :key="index" @click="scroll(item.label)">{{item.name}}</b-nav-item>
+        <b-nav-item v-for="(item,index) in navItems" class="ml-3 navigation-item" :class="item.label === selectedItem?'selected-item':'not-selected-item'" :key="index" @click="scroll(item.label)">{{item.name}}</b-nav-item>
       </b-navbar-nav>
     </b-collapse>
   </b-navbar>
@@ -91,6 +91,9 @@ export default {
 }
 .not-selected-item{
   text-decoration: none;
+}
+.navigation-item{
+  font-size: 18px;
 }
 </style>
 <style>

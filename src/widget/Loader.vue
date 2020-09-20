@@ -1,6 +1,5 @@
 <template>
   <div class="loader-wrapper" v-if="loader">
-      <!-- <img class="loader" src="../assets/loader/loader.gif"> -->
         <div class="sk-folding-cube">
             <div class="sk-cube1 sk-cube"></div>
             <div class="sk-cube2 sk-cube"></div>
