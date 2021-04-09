@@ -6,6 +6,7 @@ import { BNavbar } from 'bootstrap-vue';
 import { NavbarPlugin } from 'bootstrap-vue';
 import AOS from 'aos';
 import jQuery from "jquery";
+import { BootstrapVue } from 'bootstrap-vue'
 import 'aos/dist/aos.css';
 
 AOS.init({});
@@ -14,6 +15,7 @@ Vue.use(NavbarPlugin)
 Vue.component('b-navbar', BNavbar)
 Vue.config.productionTip = false;
 Vue.use(VueSmoothScroll);
+Vue.use(BootstrapVue)
 
 new Vue({
   router,
